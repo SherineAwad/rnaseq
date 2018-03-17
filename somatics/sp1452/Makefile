@@ -87,7 +87,7 @@ sp1452.bam:
 	-o ${WHERE}/${CURRENT}.bam
 	#This is recablirated bam 
 
-
+#This step is replaced by Mutect2 call 
 sp1452.vcf: 
 	java -jar ${GATK}/GenomeAnalysisTK.jar -T HaplotypeCaller -R ${hg38}.fasta -I ${WHERE}/${CURRENT}-recablirated.bam \
 	-dontUseSoftClippedBases -stand_call_conf 20.0 -o ${CURRENT}.vcf
